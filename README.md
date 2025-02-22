@@ -51,3 +51,9 @@ Add the following line to `/etc/modprobe.d/nvidia-modset.conf`:
 ```text
 options nvidia NVreg_PreserveVideoMemoryAllocations=1
 ```
+
+## System Reboots automatically after Shutdown
+Only on Arch (CachyOS)
+Seems to be an issue with some kernels + hardware combo (using Gigabyte Aorus X470 Mainboard)
+Can be resolved by adding bootargs `xhci_hcd.quirks=270336` to boot loader
+
