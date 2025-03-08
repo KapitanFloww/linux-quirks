@@ -5,6 +5,17 @@ For this i've used nobara-linux.
 I take no responsibility for the correctness of the commands.
 Use at your own risk.
 
+## Minecraft Crash on Exit/Quit
+
+```
+SIGBUS (0x7) at pc=0x00007efde145133c, pid=98, tid=99
+...
+C [libnvidia-glcore.so.565.77+0xa5133c]
+...
+```
+Can be fixed by adding the followig env var:
+`__GL_THREADED_OPTIMIZATIONS=0`
+
 ## Optical Drive Recognition
 My optical drive was initially not recognized by applications.
 
